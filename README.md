@@ -8,4 +8,4 @@ Step 2: In the project directory, you can run:
 
 ### `npm start`
 
-Step 3: Once step 2 executes properly, it automatically open localhost url with available port (eb. http://localhost:3001/)
+Step 3: After successfully completing step 2, the application will automatically open the localhost URL on an available port (e.g., http://localhost:3001/).
