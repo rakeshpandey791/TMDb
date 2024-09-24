@@ -6,13 +6,12 @@ import { call, put, takeEvery } from "redux-saga/effects";
 import { fetchMoviesFailure, fetchMoviesSuccess } from "./actions";
 import { FETCH_MOVIES_REQUEST } from "./actionTypes";
 
-// Define the return type of the API call function
-const API_KEY = "e42ee9b91df12c981e05bacef7f9cd11";
+const apiKey = process.env.REACT_APP_API_KEY; // Access API key
+const apiUrl = process.env.REACT_APP_API_URL; // Access API URL
 
+// Define the return type of the API call function
 function fetchMoviesFromAPI(query: string) {
-  return axios.get(
-    `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${API_KEY}`
-  );
+  return axios.get(`${apiUrl}/search/movie?query=${query}&api_key=${apiKey}`);
 }
 
 // Define the generator function return type
